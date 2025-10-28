@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 API Tester
 
-## Getting Started
+Um aplicativo web moderno e elegante para testar APIs com interface intuitiva e design responsivo.
 
-First, run the development server:
+## ✨ Características
+
+- 🎨 **Design Moderno** - Interface bonita com gradientes e animações suaves
+- 📱 **Responsivo** - Funciona perfeitamente em desktop e mobile
+- 🌙 **Tema Escuro/Claro** - Suporte automático a temas
+- ⚡ **Rápido** - Construído com Next.js 15 e Turbopack
+- 🔒 **Seguro** - Configurações de API mantidas no servidor
+- 🎯 **Simples** - Um clique para testar sua API
+
+## 🛠️ Tecnologias
+
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização moderna
+- **React 19** - Biblioteca de interface
+- **Turbopack** - Build tool ultra-rápido
+
+## 🚀 Como Usar
+
+### 1. Instalação
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+git clone <seu-repositorio>
+cd youtube-aws
+
+# Instale as dependências
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configuração da API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Opção A: Variável de Ambiente (Recomendado)**
+```bash
+# Crie um arquivo .env.local na raiz do projeto
+echo "API_URL=https://sua-api.com/endpoint" > .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Opção B: Editar Diretamente**
+Edite o arquivo `src/app/api/config/route.ts`:
+```typescript
+const apiUrl = 'https://sua-api.com/endpoint';
+```
 
-## Learn More
+### 3. Executar
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Modo desenvolvimento
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build para produção
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-## Deploy on Vercel
+## 📁 Estrutura do Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/
+│   ├── api/
+│   │   └── config/
+│   │       └── route.ts          # Rota API para configuração
+│   ├── globals.css               # Estilos globais
+│   ├── layout.tsx                # Layout principal
+│   └── page.tsx                  # Página principal
+└── ...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Funcionalidades
+
+### Interface Principal
+- **Botão Estilizado** - Design moderno com gradientes e animações
+- **Estados de Loading** - Spinner animado durante requisições
+- **Exibição de Resposta** - Área dedicada para mostrar resultados
+- **Tratamento de Erros** - Mensagens visuais para problemas
+- **URL Dinâmica** - Exibe a URL da API sendo usada
+
+### Rota API do Servidor
+- **Endpoint**: `/api/config`
+- **Método**: GET
+- **Resposta**:
+```json
+{
+  "apiUrl": "https://sua-api.com/endpoint",
+  "message": "URL da API obtida com sucesso"
+}
+```
+
+## 🔒 Segurança
+
+- ✅ URLs de API mantidas no servidor
+- ✅ Sem exposição de configurações sensíveis
+- ✅ Validação de respostas HTTP
+- ✅ Tratamento seguro de erros
+
+## 📝 Exemplo de Uso
+
+1. **Configure sua API** no arquivo `.env.local` ou `route.ts`
+2. **Execute o projeto** com `npm run dev`
+3. **Clique no botão** "Chamar API"
+4. **Veja a resposta** na área de resultado
+
+---
+
+Feito com ❤️ usando Next.js e Tailwind CSS
