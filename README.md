@@ -7,7 +7,7 @@ Um aplicativo web moderno e elegante para testar APIs com interface intuitiva e 
 - 🎨 **Design Moderno** - Interface bonita com gradientes e animações suaves
 - 📱 **Responsivo** - Funciona perfeitamente em desktop e mobile
 - 🌙 **Tema Escuro/Claro** - Suporte automático a temas
-- ⚡ **Rápido** - Construído com Next.js 15 e Turbopack
+- ⚡ **Rápido** - Construído com Next.js e Turbopack
 - 🔒 **Seguro** - Configurações de API mantidas no servidor
 - 🎯 **Simples** - Um clique para testar sua API
 
