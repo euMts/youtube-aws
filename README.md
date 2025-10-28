@@ -2,6 +2,8 @@
 
 Um aplicativo web moderno e elegante para testar APIs com interface intuitiva e design responsivo.
 
+📺 **Vídeo Tutorial:** [Link do vídeo aqui](https://youtu.be/CV7EWhzzbjY)
+
 ## ✨ Características
 
 - 🎨 **Design Moderno** - Interface bonita com gradientes e animações suaves
@@ -58,6 +60,20 @@ npm start
 ```
 
 Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+## 🚀 Deploy no AWS Amplify
+
+Para fazer deploy no AWS Amplify, configure as variáveis de ambiente:
+
+```bash
+env | grep -e API_URL >> .env.production
+```
+
+**Configuração no Console do Amplify:**
+1. Acesse o console do AWS Amplify
+2. Vá em "Environment variables"
+3. Adicione `API_URL` com o valor da sua API
+4. Faça o deploy
 
 ## 📁 Estrutura do Projeto
 
